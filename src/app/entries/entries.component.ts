@@ -17,6 +17,7 @@ export class EntriesComponent implements OnInit {
     
   }
 
+  //subscribe to entries from the backend via rest.service
   getEntries(){
     this.entries = [];
     this.rest.getEntries().subscribe((data: {}) => {
