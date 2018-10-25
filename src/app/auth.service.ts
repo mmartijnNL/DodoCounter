@@ -23,6 +23,7 @@ export class AuthService {
       return body || { };
     }
   
+    //could not get this to work. the backend gets the push call but there is no authorization header
   authenticate(userName:string, passWord:string): Observable<any> {
     console.log(userName);
 
