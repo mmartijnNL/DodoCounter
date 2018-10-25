@@ -1,0 +1,25 @@
+<h2>Table of dodo spottings</h2>
+<p>A table of numbers of dodos spotted per location, date, time and user.</p>
+  <table>
+    <tr>
+        <th><p># of Dodos</p></th>
+        <th><p>Location</p></th>
+        <th><p>Date</p></th>
+        <th><p>Time</p></th>
+        <th><p>Uploaded by</p></th>
+    </tr>
+
+    <tr *ngFor="let e of entries; let i=index;">        
+        <td> <p>{{e.amount}}</p></td>
+        <td><p>{{e.location}}</p></td>
+        <td> <p>{{ e.dateTime | date}}</p></td>
+        <td> <p>{{ e.dateTime | date:'H:mm'}}</p></td>
+        <td> <p>
+               
+            <!-- //todo load userinfo
+                {{ e.user.firstName}}  -->
+            <!-- {{ e.user.lastName}} -->
+
+        </p></td>
+    </tr>
+  </table>
